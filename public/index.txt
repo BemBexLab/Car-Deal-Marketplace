@@ -1,0 +1,129 @@
+'use client';
+
+import Image from "next/image";
+import { useState } from "react";
+
+export default function HomeHero() {
+  const [activeTab, setActiveTab] = useState("Buy");
+
+  const handleTabClick = (tab: "Buy" | "Sell/Trades") => {
+    setActiveTab(tab);
+  };
+
+  return (
+    <section className="relative w-full h-[550px] sm:h-[600px] md:h-[650px] lg:h-[550px]">
+      {/* Background split */}
+      <div className="absolute top-0 left-0 w-full h-full flex">
+        <div className="w-3/4 bg-[#EFE3F5]" />
+        <div className="w-1/4 bg-[#7800B0]" />
+      </div>
+
+      {/* Car image aligned to right and scaled down */}
+      <div
+        className="
+          absolute top-20 right-0 pointer-events-none
+          w-[1000px] h-[700px]
+          hidden sm:block
+          md:w-[700px] md:h-[480px]
+          lg:w-[1000px] lg:h-[700px]
+          xl:w-[1100px] xl:h-[750px]
+          2xl:w-[1200px] 2xl:h-[800px]
+        "
+        style={{ maxWidth: "100vw" }}
+      >
+        <div className="relative w-full h-full">
+          <Image
+            src="/Car png 01 1.svg"
+            alt="Car Image"
+            fill
+            className="object-contain object-right"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Content wrapper */}
+      <div className="relative z-10 h-full flex items-start pt-20 px-6 sm:px-10 md:px-16 lg:px-32">
+        <div className="flex flex-col items-start gap-5 max-w-[700px] z-10 border-l-4 border-[#7800B0] pl-6">
+          <h1 className="text-[#282828] text-4xl sm:text-5xl lg:text-[56px] font-bold leading-tight capitalize font-['Helvetica Now'] lg:mt-10">
+            Car Selling Your Way
+          </h1>
+          <p className="text-[#626262] text-base sm:text-lg lg:text-[20px] font-normal leading-tight font-['Helvetica Now']">
+            Our car valuation tool is powered by data from over 4 million listings, helping you find the best
+            price when selling, trading or buying a car.
+          </p>
+        </div>
+      </div>
+
+      {/* Overlapping Form Box */}
+      <div
+        className="
+          absolute bottom-[-100px] left-6
+          z-20
+          w-[90%] max-w-[400px]
+          sm:left-10 sm:w-[380px]
+          md:left-16 md:w-[400px]
+          lg:left-32 lg:w-[400px]
+          xl:left-40
+          rounded-lg
+          shadow-md
+          bg-white
+          p-6
+        "
+        style={{
+          // Ensure it never overflows the viewport on small screens
+          maxWidth: "calc(100vw - 24px)",
+        }}
+      >
+        <div className="flex flex-col gap-4">
+          <div className="flex bg-[#F7F7F7] rounded-md overflow-hidden">
+            <button
+              className={`w-1/2 px-6 py-3 text-sm font-medium ${
+                activeTab === "Buy" ? "bg-[#7800B0] text-white" : "text-[#7800B0]"
+              } focus:outline-none`}
+              onClick={() => handleTabClick("Buy")}
+            >
+              Buy
+            </button>
+            <button
+              className={`w-1/2 px-6 py-3 text-sm font-medium ${
+                activeTab === "Sell/Trades" ? "bg-[#7800B0] text-white" : "text-[#7800B0]"
+              } focus:outline-none`}
+              onClick={() => handleTabClick("Sell/Trades")}
+            >
+              Sell/Trades
+            </button>
+          </div>
+          <div>
+            <label htmlFor="licensePlate" className="block text-sm font-medium text-gray-700">
+              License Plate
+            </label>
+            <input
+              type="text"
+              id="licensePlate"
+              className="mt-1 shadow-sm focus:ring-[#7800B0] focus:border-[#7800B0] block w-full sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+          <div>
+            <label htmlFor="state" className="block text-sm font-medium text-gray-700">
+              State
+            </label>
+            <select
+              id="state"
+              className="mt-1 shadow-sm focus:ring-[#7800B0] focus:border-[#7800B0] block w-full sm:text-sm border-gray-300 rounded-md"
+            >
+              <option>Select State</option>
+              <option>Sindh</option>
+              <option>Punjab</option>
+            </select>
+          </div>
+          <button
+            className="bg-[#7800B0] hover:bg-[#660099] text-white font-semibold py-3 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7800B0] focus:ring-offset-2"
+          >
+            Get Your Offers
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
