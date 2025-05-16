@@ -81,7 +81,7 @@ export default function Header() {
             </div>
           </div>
 
-          <button className="mt-4 w-full px-6 py-2 rounded-full border border-[#7800B0] bg-white text-[#7800B0] text-[16px] font-medium hover:bg-[#7800B0] hover:border-white hover:text-white transition">
+          <button className="mt-4 w-full px-6 py-2 rounded-full border border-[#7800B0] bg-[#7800B0] text-[#7800B0] text-[16px] font-medium hover:bg-white hover:border-[#7800B0] hover:text-[#7800B0] transition">
             Sign In / Register
           </button>
         </div>
