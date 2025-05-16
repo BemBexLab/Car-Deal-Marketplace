@@ -15,7 +15,7 @@ export default function NewCarReliability() {
           </h2>
 
           <p className="text-[#626262] font-['Helvetica_Now_Display'] text-[16px] md:text-[20px] font-normal">
-            Every Certified Pre-Owned (CPO) vehicle is inspected and comes with a manufacturer warranty. Plus, we'll show you each car's deal rating so you never overpay.
+            Every Certified Pre-Owned (CPO) vehicle is inspected and comes with a manufacturer warranty. Plus, we ll show you each cars deal rating so you never overpay.
           </p>
         </div>
 

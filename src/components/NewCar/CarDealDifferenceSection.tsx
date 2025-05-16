@@ -22,7 +22,7 @@ const CarDealDifferenceSection = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Find Exactly What You Want</h3>
             <p className="text-gray-600 text-sm w-[250px]">
-              We'll give you access to the largest inventory of cars. Simply search and filter to find the one for you.
+              We ll give you access to the largest inventory of cars. Simply search and filter to find the one for you.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ const CarDealDifferenceSection = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Shop With Confidence</h3>
             <p className="text-gray-600 text-sm w-[250px]">
-              Go to the dealer knowing you'll be treated fairly. Our user-generated dealer ratings and reviews will help.
+              Go to the dealer knowing you ll be treated fairly. Our user-generated dealer ratings and reviews will help.
             </p>
           </div>
         </div>
