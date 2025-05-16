@@ -46,7 +46,7 @@ export default function Header() {
           </div>
 
           {/* Auth Button */}
-          <button className="ml-6 flex items-center px-6 py-2 rounded-full border border-[#7800B0] bg-white text-[#7800B0] text-[16px] font-medium hover:bg-[#7800B0] hover:border-white hover:text-white transition">
+          <button className="ml-6 flex items-center px-6 py-2 rounded-full border border-[#7800B0] bg-[#7800B0] text-white text-[16px] font-medium hover:bg-white hover:border-[#7800B0] hover:text-[#7800B0] transition">
             Sign In / Register
           </button>
         </div>
@@ -81,7 +81,7 @@ export default function Header() {
             </div>
           </div>
 
-          <button className="mt-4 w-full px-6 py-2 rounded-full border border-[#7800B0] bg-[#7800B0] text-[#7800B0] text-[16px] font-medium hover:bg-white hover:border-[#7800B0] hover:text-[#7800B0] transition">
+          <button className="mt-4 w-full px-6 py-2 rounded-full border bg-[#7800B0] text-[#7800B0] text-white text-[16px] font-medium hover:bg-white hover:border-[#7800B0] hover:text-[#7800B0] transition">
             Sign In / Register
           </button>
         </div>
